@@ -1,0 +1,35 @@
+{
+  "name": "notions4linux",
+  "version": "0.0.1",
+  "description": "A program to access the notions.so app",
+  "main": "main.js",
+  "build": {
+    "appId": "so.notions.notions4linux"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build -l"
+  },
+  "author": "JM Fergeau",
+  "license": "GPL-3.0-or-later",
+  "build": {
+    "productName": "${name}",
+    "artifactName": "${name}-${version}.${ext}",
+    "appId": "com.electron.${name}",
+    "directories": {
+      "app": "./",
+      "output": "./dist",
+      "buildResources": "./build"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
