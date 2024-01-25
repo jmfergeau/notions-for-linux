@@ -62,7 +62,7 @@ auto-release-main:
   script:
     - echo "Release $VERSION"
     - |
-      release-cli create --name "Release $VERSION" --tag-name v$VERSION \
-      --description 'Created using the release-cli. $CI_COMMIT_TITLE' --ref $CI_COMMIT_SHA \
-      --assets-link "{\"name\":\"${APPNAME}\",\"url\":\"${PACKAGE_REGISTRY_URL}/${APPIMAGE}\"}"
+      release-cli create --name "v$VERSION" --tag-name v$VERSION \
+      --description 'Created using the release-cli.' --ref $CI_COMMIT_SHA \
+      --assets-link "{\"name\":\"Download the AppImage\",\"url\":\"${PACKAGE_REGISTRY_URL}/${APPIMAGE}\"}"
 
