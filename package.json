@@ -3,15 +3,12 @@
   "version": "0.0.1",
   "description": "A program to access the notions.so app",
   "main": "main.js",
-  "build": {
-    "appId": "so.notions.notions4linux"
-  },
   "scripts": {
     "start": "electron .",
     "build": "electron-builder build -l"
   },
   "author": "JM Fergeau",
-  "license": "GPL-3.0-or-later",
+  "license": "AGPL-3.0",
   "build": {
     "productName": "${name}",
     "artifactName": "${name}-${version}.${ext}",
